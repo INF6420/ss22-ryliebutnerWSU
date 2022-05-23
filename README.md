@@ -1,5 +1,4 @@
-# INF 6420 - Intro to Web Development
- Rylie Butner's INF6420 Project
+# Rylie Butner's INF6420 Project
 
  A portfolio site showcasing my work.
 
@@ -7,7 +6,7 @@
 
  These wireframes show how I plan to structure my site.
 
- ![Wireframe of Landing Page](wireframes\landing-page.jpg)
+ ![Wireframe of Landing Page](wireframes/landing-page.jpg)
   
  Header - includes my name and navigation menu
 
@@ -17,7 +16,7 @@
 
  Footer - will include copyright info and social links
 
- ![Wireframe of Work Page](wireframes\work-page.jpg)
+ ![Wireframe of Work Page](wireframes/work-page.jpg)
 
  Header - includes my name and navigation menu
 
@@ -27,7 +26,7 @@
 
  Footer - will include copyright info and social links
 
- ![Wireframe of Misc. Page](wireframes\misc-page.jpg)
+ ![Wireframe of Misc. Page](wireframes/misc-page.jpg)
 
  Header - includes my name and navigation menu
 
@@ -37,7 +36,7 @@
 
  Footer - will include copyright info and social links
 
- ![Wireframe of Contact Page](wireframes\contact-page.jpg)
+ ![Wireframe of Contact Page](wireframes/contact-page.jpg)
 
  Header - includes my name and navigation menu
 
