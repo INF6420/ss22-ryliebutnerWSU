@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url("https://use.typekit.net/nfq1trc.css");
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #f3f0f2;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color:#24181b;
+}
+
+img{
+    max-width: 100%;
+}
+
+main {
+    padding: 10rem 2rem 2rem;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #24181b;
+    color: #f3f0f2;
+}
+
+nav a {
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.main-menu {
+    position:relative;
+}
+
+.menu-btn { 
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 1.5rem 2rem 2rem;
+    position: relative;
+    user-select: all;
+}
+
+.menu-icon .navicon {
+    background-color: #24181b;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 30px;
+    margin: 4px;
+}
+
+
+.main-nav {
+    list-style: none;
+    opacity: 0;
+    height: 0;
+    color: #24181b;
+    padding: 1rem 2rem 2rem;
+}
+
+.site-name { 
+    display: inline-block;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem;
+    color: #24181b;
+}
+
+.menu-btn:selection + .main-nav{
+    opacity: 1;
+    height: 100%;
+    list-style: inside;
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    header, footer {
+        clear: both;
+    }
+    
+    main {
+        padding-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: space-between; 
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .site-name {
+        flex: 1 0 auto;
+        padding: 2rem;
+        background-color: #24181b;
+        color: #f3f0f2;
+    }
+
+    .main-nav {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        opacity: 1;
+        flex-direction: row;
+        padding-top:2rem;
+        padding-bottom: 4rem;
+        border-bottom: #24181b;
+        border-style: none none solid;
+        border-width: 1px;
+     
+    }
+
+    .menu-link{
+        padding-left: 6rem;
+    }
+
+
+
+}
