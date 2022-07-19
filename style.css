@@ -14,10 +14,11 @@ body {
     background-color: #f3f0f2;
     font-family: 'Lexend', sans-serif;
     font-weight: 300;
+    color: #0E4F35;
 }
 
 a {
-    color:#24181b;
+    color:#0E4F35;
 }
 
 img{
@@ -25,13 +26,32 @@ img{
 }
 
 main {
-    padding: 10rem 2rem 2rem;
-}
+    padding: 0rem 0rem 0rem0rem;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin: 0 auto;}
 
 footer {
-    padding: 1rem;
-    background-color: #24181b;
+    padding: 2rem;
+    background-color: #0C9C62;
     color: #f3f0f2;
+    line-height: 2rem;
+    text-align:right;
+}
+
+footer a{
+    padding: 1rem;
+    color: #f3f0f2;
+}
+
+footer ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-right: -1rem;
+    
 }
 
 nav a {
@@ -41,53 +61,140 @@ nav a {
 
 .main-menu {
     position:relative;
+    
 }
 
+
+.main-nav li {
+    text-align: right;
+    font-size: 2rem;
+    
+}
+
+/* MENU BUTTON */
 .menu-btn { 
     display: none;
+    
 }
 
 .menu-icon {
     cursor: pointer;
-    display: inline-block;
+    padding: 3rem 3rem 3rem;
+    position: relative;
+    user-select: none;
     float: right;
-    padding: 1.5rem 2rem 2rem;
-    position: relative;
-    user-select: all;
-}
+    border-bottom: #0C9C62;
+    border-style: none none solid;
+    border-width: 1px;
+  }
 
-.menu-icon .navicon {
-    background-color: #24181b;
+  .line{  
+    width:100%;
+    border-bottom: #0C9C62;
+    border-style: none none solid;
+    border-width: 1px;}
+  
+  .menu-icon .navicon {
+    background: #0C9C62;
     display: block;
-    height: 2px;
+    height: 4px;
     position: relative;
+    transition: background 0.2s ease-out;
     width: 30px;
-    margin: 4px;
-}
+    border-radius: 30%;
+    
+  }
+  
+  .menu-icon .navicon:before,
+  .menu-icon .navicon:after {
+    background: #0C9C62;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+    
+  }
+  
+  .menu-icon .navicon:before {
+    top: 8px;
+    border-radius: 30%;
+    
+  }
+  
+  .menu-icon .navicon:after {
+    top: -8px;
+    border-radius: 30%;
+    
+  }
+  
+  .menu-btn {
+    display: none;
+    
+    
+  }
+  
+  .menu-btn:checked ~ .main-nav {
+    opacity: 1;
+    height: 150px;
+    transition: all 0.2s ease-out;
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
 
 
+/*How can I fix this border?*/
 .main-nav {
     list-style: none;
     opacity: 0;
     height: 0;
-    color: #24181b;
+    color: #0C9C62;
     padding: 1rem 2rem 2rem;
+    line-height: 3rem;
 }
 
 .site-name { 
     display: inline-block;
     flex-direction: column;
-    padding: 1rem 2rem 2rem;
-    color: #24181b;
+    padding: 2rem 2rem 2rem;
+    color: #f3f0f2;
+    background-color: #0C9C62;
+    text-align: left;
+} 
+
+.featured-image-container{
+    display: inline-block;
+    position: relative;
+    flex-wrap: wrap;
+    float: left;
+    width: 70%;
 }
 
-.menu-btn:selection + .main-nav{
-    opacity: 1;
-    height: 100%;
-    list-style: inside;
-    display: block;
+.about-text-container {
+    float: left;
+    width: 50%;
+    padding: 2rem;
+    max-width: 500px;
+    
 }
 
+/* DESKTOP DIMENSIONS*/
 @media screen and (min-width: 768px) {
     header, footer {
         clear: both;
@@ -96,8 +203,8 @@ nav a {
     main {
         padding-top: 5rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: left;
+        justify-content: left;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -107,6 +214,12 @@ nav a {
         justify-content: space-between; 
     }
 
+    .main-nav li {
+        text-align: right;
+        font-size: 1.5rem;
+        
+    }
+
     .menu-icon {
         display: none;
     }
@@ -114,28 +227,30 @@ nav a {
     .site-name {
         flex: 1 0 auto;
         padding: 2rem;
-        background-color: #24181b;
+        background-color: #0C9C62;
         color: #f3f0f2;
     }
+
 
     .main-nav {
         width: 100%;
         list-style: none;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-start;
         opacity: 1;
         flex-direction: row;
         padding-top:2rem;
         padding-bottom: 4rem;
-        border-bottom: #24181b;
+        border-bottom: #0C9C62;
         border-style: none none solid;
         border-width: 1px;
+        line-height: 2rem;
      
     }
 
     .menu-link{
-        padding-left: 6rem;
+        padding-left: 5.5rem;
     }
 
 
