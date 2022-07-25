@@ -39,6 +39,8 @@ footer {
     color: #f3f0f2;
     line-height: 2rem;
     text-align:right;
+    position:relative;
+ bottom:0;
 }
 
 footer a{
@@ -182,7 +184,7 @@ nav a {
     display: inline-block;
     position: relative;
     flex-wrap: wrap;
-    float: left;
+    
     width: 70%;
 }
 
@@ -192,6 +194,76 @@ nav a {
     padding: 2rem;
     max-width: 500px;
     
+}
+
+.contact-body {
+    padding-left: 3em;
+    margin: auto;
+    
+}
+
+.contact-heading{
+    display: block;
+    margin: auto 0.25em 1em;
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    display: block;
+    margin-bottom: 10em;
+    
+}
+
+label{
+    display: block;
+    margin-bottom: 0.25em;
+    margin-top: 1em;
+    font-weight: 500;
+}
+.form-input{ 
+    border: 1px solid #0C9C62;
+    font-size: 16px;
+    padding: .5em;
+    display: block;
+    width: 400px;
+}
+
+.form-input:focus{
+    outline: none;
+    border: 1px solid #0E4F35
+}
+
+[type="submit"] {
+    border: 1px solid #0C9C62;
+    background: #0c9c621a;
+    font-size: 18px;
+    padding: .75em 1.5em;
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-weight: 700;
+    color: #0E4F35;
+    cursor: pointer;
+}
+
+[type="submit"]:hover {
+    background: #0E4F35;
+    color: white;
+    font-weight: 700;
+}
+
+textarea {
+ height: 150px;
+ resize: vertical;
+}
+
+.error { 
+    border-color: red;
+}
+
+.error-message{
+    color: red;
 }
 
 /* DESKTOP DIMENSIONS*/
@@ -207,6 +279,15 @@ nav a {
         justify-content: left;
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    .form {
+        width: 800px;
+    text-align: left;}
+
+
+    .contact-body{
+        margin: auto;
     }
 
     .main-menu {
