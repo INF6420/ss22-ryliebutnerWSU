@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rylie Butner | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html"><h2>Rylie Butner</h2></a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="misc.html">Misc.</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>  
+        <nav class="main-menu">
+
+            <a href="index.html" class="site-name"><div><h1>Rylie Butner</h1></div></a> <span class="line"></span>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                    <label class="menu-icon" for="menu-btn">
+                        <span class="navicon top-bar" aria-label="toggle for menu"></span>
+                    </label>
+                <ul class="main-nav">
+                    <li><a href="work.html" class="menu-link">Work</a></li>
+                    <li><a href="misc.html" class="menu-link">Misc.</a></li>
+                    <li><a href="contact.html" class="menu-link">Contact</a></li>
+                </ul> 
+           
         </nav>
     </header>
     <main>
@@ -59,8 +66,10 @@
         <div>
            <h2>Stay in contact:</h2>
            <p>
-                <a href="https://www.linkedin.com/in/rylie-butner-970138125/">LinkedIn</a>
-                <a href="https://www.instagram.com/rylie.design/">Instagram</a>
+                <ul class="social-media">
+                    <li><a href="https://www.linkedin.com/in/rylie-butner-970138125/">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/rylie.design/">Instagram</a></li>
+                </ul>
             </p>
         </div>
         <div>
