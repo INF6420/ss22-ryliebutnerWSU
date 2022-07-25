@@ -24,22 +24,28 @@
         </nav>
     </header>
     <main>
-        <h1>Send me a message:</h1>
-    <form class="cf">
-  <div class="half left cf">
-    <h2>Name</h2>
-    <input type="text" id="input-name" placeholder="Name">
-    <h2>Email</h2>
-    <input type="email" id="input-email" placeholder="Email address">
-    <h2>Subject</h2>
-    <input type="text" id="input-subject" placeholder="Subject">
-  </div>
-  <div class="half right cf">
-    <h2>Message</h2>
-    <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
-  </div>  
-  <input type="submit" value="Submit" id="input-submit">
-</form>
+        <div class="contact-body">
+        <span class="contact-heading"><h1>Send me a message:</h1> </span>
+
+            <form action="https://formspree.io/f/moqrgyrb" method="POST" data-validate>
+                
+                <label for="full-name">
+                    Name </label>
+                    <input type="text" name="name" id="full-name" placeholder="First and Last" class="form-input">
+                    
+                <label>
+                        Email
+                </label>
+                    <input type="email" name="email" class="form-input" placeholder="someone@example.com" required>
+                
+                <label>
+                    Message
+                </label>
+                    <textarea name="message" placeholder="Hi!" class="form-input" rows="4" required></textarea>
+        <!--your other form fields go here-->
+        <button type="submit" class="form-button">Send</button>
+      </form> 
+    </div>
     </main>
     <footer>
         <div>
@@ -55,5 +61,9 @@
             <p>© 2022 Rylie Butner</p>
         </div>
     </footer> 
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/validate@2.2.0/dist/validate.min.js"></script>
+<script>validate.init();</script>
+
 </body>
 </html>
