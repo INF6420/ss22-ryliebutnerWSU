@@ -9,12 +9,13 @@
     padding: 0px;
     margin: 0px;
 }
-
+/*f3f0f2*/
 body {
     background-color: #f3f0f2;
     font-family: 'Lexend', sans-serif;
     font-weight: 300;
     color: #0E4F35;
+    min-height:100vh;
 }
 
 a {
@@ -23,24 +24,30 @@ a {
 
 img{
     max-width: 100%;
+    display: block;
 }
 
 main {
-    padding: 0rem 0rem 0rem0rem;
+    padding-top: 3rem;
+
     display: flex;
     align-items: left;
     justify-content: left;
     flex-wrap: wrap;
-    margin: 0 auto;}
+    margin: auto;}
+
+    
 
 footer {
     padding: 2rem;
-    background-color: #0C9C62;
+    background-color: #0E4F35;
     color: #f3f0f2;
     line-height: 2rem;
     text-align:right;
     position:relative;
- bottom:0;
+ height: 160px;
+
+
 }
 
 footer a{
@@ -63,13 +70,19 @@ nav a {
 
 .main-menu {
     position:relative;
-    
+    background-color: #e9e8e8;
+
 }
 
 
 .main-nav li {
     text-align: right;
     font-size: 2rem;
+    
+}
+
+.main-nav a{
+    display: block;
     
 }
 
@@ -80,21 +93,16 @@ nav a {
 }
 
 .menu-icon {
+    display:flex;
+    flex-wrap: nowrap;
     cursor: pointer;
-    padding: 3rem 3rem 3rem;
+    padding: 2rem 3rem 3rem;
     position: relative;
     user-select: none;
     float: right;
-    border-bottom: #0C9C62;
-    border-style: none none solid;
-    border-width: 1px;
+
   }
 
-  .line{  
-    width:100%;
-    border-bottom: #0C9C62;
-    border-style: none none solid;
-    border-width: 1px;}
   
   .menu-icon .navicon {
     background: #0C9C62;
@@ -139,8 +147,10 @@ nav a {
   
   .menu-btn:checked ~ .main-nav {
     opacity: 1;
-    height: 150px;
+    height: 200px;
     transition: all 0.2s ease-out;
+    background-color: #e9e8e8;
+
   }
   
   .menu-btn:checked ~ .menu-icon .navicon {
@@ -161,14 +171,22 @@ nav a {
   }
 
 
-/*How can I fix this border?*/
+
 .main-nav {
     list-style: none;
     opacity: 0;
     height: 0;
     color: #0C9C62;
-    padding: 1rem 2rem 2rem;
+    /*padding-top: 2em;
+    padding-bottom: 5em;*/
     line-height: 3rem;
+    flex-wrap: nowrap;
+    
+}
+
+.main-nav ul{
+    padding-top: 2em;
+    padding-bottom: 5em;
 }
 
 .site-name { 
@@ -181,44 +199,172 @@ nav a {
 } 
 
 .featured-image-container{
-    display: inline-block;
+display: inline-block;
     position: relative;
-    flex-wrap: wrap;
+    width: 500px;
+    margin-bottom: 2em;
+    padding-left: 2em;
     
-    width: 70%;
 }
 
+.featured-text-container{
+   margin-left: 5em;
+   margin-bottom: 2em;
+   max-width: 800px;
+}
+
+.about-title{
+    font-size: 1rem;
+    color: #0E4F35;
+}
+
+
+
+
+
+
 .about-text-container {
-    float: left;
-    width: 50%;
-    padding: 2rem;
-    max-width: 500px;
     
+    float: left;
+    max-width: 1000px;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    
+}
+
+.about-text-container h2{
+    font-weight: 300;
+
+}
+
+@media screen and (max-width: 1457px){
+    
+
+    .featured-image-container{
+        width: 95%;
+        max-width: 500px;
+    }
+    .featured-text-container{
+        margin-left: 2em;
+    margin-bottom: 5em;
+    }
+}
+
+
+
+.wrapper {
+    flex:1;
+  }
+
+.under-construction{
+text-align:center;
+  display:flex;
+  flex-direction:column;
+  min-height:65vh;
+  font-size: 1.5em;
+  
+  }
+
+  .under-construction h1 {
+    font-weight: 300;
+    vertical-align: center;
+    line-height: 5em;
+  }
+  
+
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 100%;
+    text-shadow: 3px 3px 8px #000000;
+    gap: 0em;
+    text-align: left;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    transition: .5s ease;
+    background-color: #000000;
+  }
+
+  .project-tile:hover .overlay {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .project-tile{
+    width: 100%;
+    position: relative;
+  }
+
+  .project-tile h2{
+    font-weight: 300;
+  }
+
+  .project-tile h1{
+    font-weight: 500;
+  }
+
+.project-tile:hover .project-tile-txt{
+    opacity: 0;
+    transition: opacity .25s ease;
+    -webkit-transition: opacity .25s ease;
+}
+
+
+.project-tile-txt{
+    position: absolute;
+
+    z-index: 2;
+    margin: auto;
+
+    padding: 2em;
+    color: #f3f0f2;
+}
+
+
+.project-tile img{
+    display: flex;
+    flex-flow: column;
+}
+
+.project-tile img{
+    display: block;
+    width: 100%;
 }
 
 .contact-body {
-    padding-left: 3em;
     margin: auto;
-    
+        align-items: center;
+        padding-left: .5em;
+        display: block;
 }
+
 
 .contact-heading{
     display: block;
-    margin: auto 0.25em 1em;
+    /*margin: auto 0.25em 1em;*/
     width: 100%;
 }
 
 form{
     width: 100%;
     display: block;
-    margin-bottom: 10em;
-    
+    margin-bottom: 10em;    
 }
 
 label{
     display: block;
-    margin-bottom: 0.25em;
-    margin-top: 1em;
+    margin-bottom: 0em;
+    margin-top: 0em;
     font-weight: 500;
 }
 .form-input{ 
@@ -265,6 +411,36 @@ textarea {
 .error-message{
     color: red;
 }
+@media screen and (max-width: 450px){
+
+
+    .form-input{
+        width: 300px;
+    }
+
+    .contact-heading{
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 750px){
+.about-title{
+    font-size: .75rem;
+}
+
+.about-text-container{
+    font-size: 1em;
+}
+
+}
+
+@media screen and (max-width: 550px){
+    .about-title{
+        font-size: .45rem;
+    }
+
+
+    }
 
 /* DESKTOP DIMENSIONS*/
 @media screen and (min-width: 768px) {
@@ -273,30 +449,36 @@ textarea {
     }
     
     main {
-        padding-top: 5rem;
+        padding-top: 3rem;
         display: flex;
-        align-items: left;
-        justify-content: left;
-        max-width: 1200px;
+        /*align-items: left;*/
+        /*justify-content: left;*/
+        max-width: 100%;
         margin: 0 auto;
     }
 
     .form {
         width: 800px;
-    text-align: left;}
+    text-align: left;
+            
+}
 
 
-    .contact-body{
+    /*.contact-body{
         margin: auto;
-    }
+        align-items: center;
+        padding-left: 3em;
+        display: block;
+    }*/
 
     .main-menu {
         display: flex;
         justify-content: space-between; 
+        
     }
 
     .main-nav li {
-        text-align: right;
+        
         font-size: 1.5rem;
         
     }
@@ -318,20 +500,24 @@ textarea {
         list-style: none;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: flex-start;
+        justify-content: flex-end;
         opacity: 1;
         flex-direction: row;
         padding-top:2rem;
         padding-bottom: 4rem;
-        border-bottom: #0C9C62;
+        /*border-bottom: #0C9C62;
         border-style: none none solid;
-        border-width: 1px;
+        border-width: 1px;*/
         line-height: 2rem;
+        background-color: #e9e8e8
+        ;
      
     }
 
     .menu-link{
-        padding-left: 5.5rem;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+        text-align: center;
     }
 
 
